@@ -85,7 +85,7 @@ const vendor = {
       id: 'payResponse',
       title: <FormattedMessage id="payResponse" />,
       type: 'item',
-      url: '/dashboard/analytics',
+      url: '/widget/chart',
       icon: icons.pay
     }
   ]

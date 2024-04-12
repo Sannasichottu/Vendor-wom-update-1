@@ -14,8 +14,10 @@ import { openComponentDrawer } from 'store/reducers/menu';
 // material-ui
 import { styled } from '@mui/material/styles';
 import LinearProgress from '@mui/material/LinearProgress';
+import MainLayout from 'layout/MainLayout';
+// import DashboardDefault from 'pages/dashboard/default';
 // import Login from 'pages/auth/auth1/login';
-import Register from 'pages/auth/auth1/register';
+// import Register from 'pages/auth/auth1/register';
 
 const Header = lazy(() => import('./Header'));
 // const FooterBlock = lazy(() => import('./FooterBlock'));
@@ -53,8 +55,11 @@ const CommonLayout = ({ layout = 'blank' }) => {
       {(layout === 'landing' || layout === 'simple') && (
         <Suspense fallback={<Loader />}>
           {/* <Header layout={layout} /> */}
+          {/* <Header layout={layout} /> */}
+          <MainLayout />
           {/* <Login isFull={layout === 'landing'} /> */}
-          <Register />
+          {/* <DashboardDefault /> */}
+          {/* <Register /> */}
           {/* <Outlet /> */}
           {/* <FooterBlock isFull={layout === 'landing'} /> */}
         </Suspense>

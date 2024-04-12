@@ -114,7 +114,7 @@ const ProductOverview = () => {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
-            <Typography variant="h5">Project overview</Typography>
+            <Typography variant="h5">Invoice overview</Typography>
             <IconButton
               color="secondary"
               id="wallet-button"
@@ -157,7 +157,7 @@ const ProductOverview = () => {
             <Stack alignItems="center" sx={{ py: 1.5 }}>
               <Stack direction="row" alignItems="center" spacing={1}>
                 <Dot size={6} componentDiv sx={{ bgcolor: 'secondary.darker' }} />
-                <Typography>Apps</Typography>
+                <Typography>Honda</Typography>
               </Stack>
               <Typography variant="subtitle1">10+</Typography>
             </Stack>
@@ -168,7 +168,7 @@ const ProductOverview = () => {
             <Stack alignItems="center" sx={{ py: 1.5 }}>
               <Stack direction="row" alignItems="center" spacing={1}>
                 <Dot size={6} componentDiv sx={{ bgcolor: 'secondary.darker' }} />
-                <Typography>Other</Typography>
+                <Typography>Audi</Typography>
               </Stack>
               <Typography variant="subtitle1">5+</Typography>
             </Stack>
@@ -179,7 +179,7 @@ const ProductOverview = () => {
             <Stack alignItems="center" sx={{ py: 1.5 }}>
               <Stack direction="row" alignItems="center" spacing={1}>
                 <Dot size={6} componentDiv sx={{ bgcolor: 'secondary.darker' }} />
-                <Typography>Widgets</Typography>
+                <Typography>Tata</Typography>
               </Stack>
               <Typography variant="subtitle1">150+</Typography>
             </Stack>
@@ -190,7 +190,7 @@ const ProductOverview = () => {
             <Stack alignItems="center" sx={{ py: 1.5 }}>
               <Stack direction="row" alignItems="center" spacing={1}>
                 <Dot size={6} componentDiv sx={{ bgcolor: 'secondary.darker' }} />
-                <Typography>Forms</Typography>
+                <Typography>Kia</Typography>
               </Stack>
               <Typography variant="subtitle1">50+</Typography>
             </Stack>
@@ -201,7 +201,7 @@ const ProductOverview = () => {
             <Stack alignItems="center" sx={{ py: 1.5 }}>
               <Stack direction="row" alignItems="center" spacing={1}>
                 <Dot size={6} componentDiv sx={{ bgcolor: 'secondary.darker' }} />
-                <Typography>Components</Typography>
+                <Typography>Maruti</Typography>
               </Stack>
               <Typography variant="subtitle1">200+</Typography>
             </Stack>
@@ -212,7 +212,7 @@ const ProductOverview = () => {
             <Stack alignItems="center" sx={{ py: 1.5 }}>
               <Stack direction="row" alignItems="center" spacing={1}>
                 <Dot size={6} componentDiv sx={{ bgcolor: 'secondary.darker' }} />
-                <Typography>Pages</Typography>
+                <Typography>BMW</Typography>
               </Stack>
               <Typography variant="subtitle1">150+</Typography>
             </Stack>
