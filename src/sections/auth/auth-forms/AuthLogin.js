@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { Navigate, Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 // material-ui
 import {
+  Button,
   Checkbox,
   FormControlLabel,
   FormHelperText,
@@ -50,7 +51,6 @@ const AuthLogin = ({ forgot }) => {
     <>
       <Formik
         initialValues={{
-          // info@phoenixcoded.co
           email: 'info@phoenixcoded.co',
           password: '123456',
           submit: null
@@ -76,7 +76,7 @@ const AuthLogin = ({ forgot }) => {
           }
         }}
       >
-        {({ errors, handleBlur, handleChange, handleSubmit, touched, values }) => (
+        {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
           <form noValidate onSubmit={handleSubmit}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
@@ -162,10 +162,9 @@ const AuthLogin = ({ forgot }) => {
               )}
               <Grid item xs={12}>
                 <AnimateButton>
-                  <Navigate to="/dashboard/default" replace={true} />
-                  {/* <Button disableElevation disabled={isSubmitting} fullWidth size="large" type="submit" variant="contained" color="primary">
+                  <Button disableElevation disabled={isSubmitting} fullWidth size="large" type="submit" variant="contained" color="primary">
                     Login
-                  </Button> */}
+                  </Button>
                 </AnimateButton>
               </Grid>
             </Grid>
