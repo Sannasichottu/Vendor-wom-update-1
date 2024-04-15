@@ -15,11 +15,13 @@ import FirebaseRegister from 'sections/auth/auth-forms/AuthRegister';
 import imgFacebook from 'assets/images/auth/facebook.svg';
 import imgTwitter from 'assets/images/auth/twitter.svg';
 import imgGoogle from 'assets/images/auth/google.svg';
+import { useAuth0 } from '@auth0/auth0-react';
 
 // ================================|| REGISTER ||================================ //
 
 const Register = () => {
   const { isLoggedIn } = useAuth();
+  const { loginWithRedirect } = useAuth0();
 
   return (
     <AuthWrapper2>
@@ -40,7 +42,7 @@ const Register = () => {
               </AuthSocButton>
             </Grid>
             <Grid item xs={12}>
-              <AuthSocButton>
+              <AuthSocButton onClick={() => loginWithRedirect()}>
                 <img src={imgGoogle} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Google
               </AuthSocButton>
             </Grid>

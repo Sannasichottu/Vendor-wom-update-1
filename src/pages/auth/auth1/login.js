@@ -12,13 +12,14 @@ import AuthWrapper from 'sections/auth/AuthWrapper';
 import AuthLogin from 'sections/auth/auth-forms/AuthLogin';
 
 // assets
+import { useAuth0 } from '@auth0/auth0-react';
 import imgFacebook from 'assets/images/auth/facebook.svg';
 import imgTwitter from 'assets/images/auth/twitter.svg';
 import imgGoogle from 'assets/images/auth/google.svg';
-
 // ================================|| LOGIN ||================================ //
 
 const Login = () => {
+  const { loginWithRedirect } = useAuth0();
   const { isLoggedIn } = useAuth();
 
   return (
@@ -40,8 +41,8 @@ const Login = () => {
               </AuthSocButton>
             </Grid>
             <Grid item xs={12}>
-              <AuthSocButton>
-                <img src={imgGoogle} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Google
+              <AuthSocButton onClick={() => loginWithRedirect()}>
+                <img src={imgGoogle} alt="Google" style={{ margin: '0 10px' }} /> Sign In with Google
               </AuthSocButton>
             </Grid>
           </Grid>

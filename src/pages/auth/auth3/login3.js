@@ -24,6 +24,7 @@ import imgSms from 'assets/images/auth/sms.svg';
 import imgFacebook from 'assets/images/auth/facebook.svg';
 import imgTwitter from 'assets/images/auth/twitter.svg';
 import imgGoogle from 'assets/images/auth/google.svg';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const steps = ['1', '2', '3', '4', '5'];
 
@@ -50,6 +51,7 @@ const Login3 = () => {
   const [skipped, setSkipped] = useState(new Set());
   const [selectedValue, setSelectedValue] = useState('Personal');
   const [otp, setOtp] = useState();
+  const { loginWithRedirect } = useAuth0();
 
   const borderColor = theme.palette.mode === ThemeMode.DARK ? theme.palette.secondary[200] : theme.palette.secondary.light;
 
@@ -129,7 +131,7 @@ const Login3 = () => {
                           </AuthSocButton>
                         </Grid>
                         <Grid item xs={12}>
-                          <AuthSocButton>
+                          <AuthSocButton onClick={() => loginWithRedirect()}>
                             <img src={imgGoogle} alt="Facebook" style={{ margin: '0 10px' }} /> Sign In with Google
                           </AuthSocButton>
                         </Grid>

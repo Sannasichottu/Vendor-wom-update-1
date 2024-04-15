@@ -8,7 +8,6 @@ import TotalIncome from 'sections/widget/chart/TotalIncome';
 // ==============================|| WIDGET - CHARTS ||============================== //
 
 const WidgetChart = () => {
-
   return (
     <Grid container rowSpacing={4.5} columnSpacing={3}>
       {/* row 1 */}

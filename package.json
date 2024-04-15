@@ -3,6 +3,7 @@
   "version": "9.1.2",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@auth0/auth0-spa-js": "^2.0.5",
     "@date-io/date-fns": "^2.16.0",
     "@date-io/dayjs": "^2.16.0",
